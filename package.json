@@ -1,0 +1,33 @@
+{
+  "name": "salamanca-proxy",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "check-types": "turbo check-types",
+    "dev:native": "turbo -F native dev",
+    "dev:web": "turbo -F web dev",
+    "dev:server": "turbo -F server dev",
+    "db:push": "turbo -F @salamanca-proxy/db db:push",
+    "db:studio": "turbo -F @salamanca-proxy/db db:studio",
+    "db:generate": "turbo -F @salamanca-proxy/db db:generate",
+    "db:migrate": "turbo -F @salamanca-proxy/db db:migrate"
+  },
+  "dependencies": {
+    "@salamanca-proxy/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@salamanca-proxy/config": "workspace:*",
+    "@types/bun": "catalog:",
+    "turbo": "^2.6.3",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

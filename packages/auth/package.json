@@ -1,0 +1,24 @@
+{
+  "name": "@salamanca-proxy/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@salamanca-proxy/db": "workspace:*",
+    "@salamanca-proxy/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@salamanca-proxy/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "extends": "@salamanca-proxy/config/tsconfig.base.json"
+}
